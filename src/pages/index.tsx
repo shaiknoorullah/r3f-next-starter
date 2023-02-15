@@ -22,11 +22,8 @@ import Footer from "../components/dom/Footer";
 import { useRouter } from "next/router";
 import { ChakraProvider, Flex } from "@chakra-ui/react";
 import { useState } from "react";
-import ProductDetailpage from "@/components/dom/ProductDetailspage";
-import Qualities from "../components/dom/Qualities";
+// import ProductDetailpage from "@/components/dom/ProductDetailspage";
 import ProductDetailComponent from "@/components/dom/ProductDetailComponent";
-
-// import ProductDetailComponent from "@/components/dom/ProductDetailComponent";
 // import ProductDetail from "./product/[id]";
 
 // import Shader from '@/components/canvas/ShaderExample/ShaderExample'
@@ -69,17 +66,28 @@ const DOM = () => {
 
   return (
     <>
-      {/* <Loader /> */}
-      {/* <Navbar /> */}
-      {/* <Qualities /> */}
-      {/* <MobileQualities /> */}
-      {/* <Testimonials /> */}
-      {/* <Mobiletestimonial /> */}
-      {/* <ProductDetailpage /> */}
-      {/* <GetinTouch /> */}
-      {/* <Truely /> */}
-      {/* <MobileTruely /> */}
-      <ProductDetailComponent />
+      {/* <Loader />
+      <Navbar />
+      <FirstPage
+        activeBg={activeBg}
+        fontColor={fontColor}
+        imgInvert={imgInvert}
+        filter={filter}
+        setBlueActive={setBlueActive}
+        setRedActive={setRedActive}
+        setWhiteActive={setWhiteActive}
+      />
+      <Scene1 />
+      <Scene2 />
+      <Truely activeBg={activeBg} fontColor={fontColor} />
+      <MobileTruely activeBg={activeBg} fontColor={fontColor} />
+      <Brands />
+      {/* <Fragrances /> */}
+      {/* <FragrancesZed /> */}
+      {/* <MobileFragrances /> */}
+      {/* <GetinTouch activeBg={activeBg} fontColor={fontColor} /> */}
+      {/* <ProductDetailComponent /> */}
+      {/* <Footer /> */}
     </>
   );
 };

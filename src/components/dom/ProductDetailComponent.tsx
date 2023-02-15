@@ -20,17 +20,18 @@ const ProductDetailComponent = ({ productData }) => {
   return (
     <Box
       w="100vw"
-      // h="100vh"
+      h="100vh"
       position="relative"
-      display={{ lg: "flex", base: "none" }}
+      display={{ md: "flex", base: "none" }}
     >
-      <Box w="45%" px="2rem" py="2rem" display={{ lg: "flex", base: "none" }}>
-        <Image
-          w="800px"
-          maxH="850px"
-          objectFit="cover"
-          src={productData?.src}
-        />
+      <Box
+        w="45%"
+        h="100%"
+        px="2rem"
+        py="2rem"
+        display={{ md: "flex", base: "none" }}
+      >
+        <Image w="800px" maxH="100%" objectFit="cover" src={productData?.src} />
       </Box>
       <Box
         // maxW="800px"
@@ -43,9 +44,10 @@ const ProductDetailComponent = ({ productData }) => {
         <Heading
           fontSize="4.1vw"
           py="2rem"
-          px="2rem"
+          // px="2rem"
           fontFamily="novara"
           w="41vw"
+          textAlign="left"
         >
           {productData?.productName}
         </Heading>
@@ -54,7 +56,13 @@ const ProductDetailComponent = ({ productData }) => {
           {productData?.productDiscription}
         </Text>
 
-        <Box display="flex" marginTop="1rem" gap="2rem" alignItems="center">
+        <Box
+          display="flex"
+          fontSize="24px"
+          marginTop="1rem"
+          gap="2rem"
+          alignItems="center"
+        >
           <label className="container">
             50 ml/1.7 oz
             <input type="radio" checked name="radio" />
@@ -85,7 +93,7 @@ const ProductDetailComponent = ({ productData }) => {
               color: "white",
             }}
             border="1px solid black"
-            p="1rem 1.5rem"
+            p="1rem 1rem"
             borderRadius="50px"
           >
             Top Note
@@ -98,7 +106,7 @@ const ProductDetailComponent = ({ productData }) => {
             border="1px solid black"
             bg="black"
             color="white"
-            p="1rem 1.5rem"
+            p="1rem 1rem"
             borderRadius="50px"
           >
             Medium Note
@@ -111,7 +119,7 @@ const ProductDetailComponent = ({ productData }) => {
             bg="black"
             border="1px solid black"
             color="white"
-            p="1rem 1.5rem"
+            p="1rem 1rem"
             borderRadius="50px"
           >
             Base Note
@@ -152,7 +160,7 @@ const ProductDetailComponent = ({ productData }) => {
       <Text
         position="absolute"
         top="0"
-        right={{ xl: "100", lg: "-50" }}
+        right={{ xl: "100", md: "-50" }}
         fontFamily="gilroy"
         fontSize="36px"
         py="4rem"

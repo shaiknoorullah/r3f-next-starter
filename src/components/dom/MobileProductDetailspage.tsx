@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
-export default function ProductDetailpage() {
+export default function ProductDetailpage({ productData }) {
   return (
     <Box
       display={{ base: "flex", md: "none" }}
@@ -36,20 +36,11 @@ export default function ProductDetailpage() {
           fontSize={{ base: "18px", sm: "20px" }}
           lineHeight={"0.04em"}
           justifyItems={"flex-end"}
-          // position={"absolute"}
-          // left={"356px"}
         >
           $300
         </Text>
       </Box>
-      <Image
-        src={"unsplash.png"}
-        // w="400px"
-        // height={"500px"}
-        paddingTop={"10px"}
-
-        // width={"90%"}
-      ></Image>
+      <Image src={"unsplash.png"} w="400px" paddingTop={"10px"}></Image>
       <Text
         // width={"306px"}
         fontFamily={"gilroy"}
@@ -158,9 +149,7 @@ export default function ProductDetailpage() {
           src={"arrowicon.png"}
           width={"23px"}
           height={"11px"}
-          // position={"absolute"}
-          // left={"280px"}
-          marginTop={"12px"}
+          margin="auto"
         />
       </Flex>
     </Box>
