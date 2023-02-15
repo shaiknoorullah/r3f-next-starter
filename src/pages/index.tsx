@@ -18,6 +18,7 @@ import Fragrances from "../components/dom/Fragrances";
 import FragrancesZed from "../components/dom/FragrancesZed";
 import GetinTouch from "../components/dom/GetinTouch";
 import Testimonials from "../components/dom/Testimonials";
+import ThankYou from "../components/dom/ThankYou";
 import Footer from "../components/dom/Footer";
 import { useRouter } from "next/router";
 import { ChakraProvider, Flex } from "@chakra-ui/react";
@@ -88,6 +89,7 @@ const DOM = () => {
       {/* <GetinTouch activeBg={activeBg} fontColor={fontColor} /> */}
       {/* <ProductDetailComponent /> */}
       {/* <Footer /> */}
+      <ThankYou />
     </>
   );
 };
