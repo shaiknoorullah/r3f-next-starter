@@ -8,12 +8,16 @@ import {
   Heading,
   Image,
   Input,
+  Link,
+  LinkBox,
   Text,
   Wrap,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { React, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import ThankYou from "./ThankYou";
+import { useRouter } from "next/router";
 
 const formControlVariant = {
   hidden: {
@@ -135,6 +139,7 @@ const Btn = ({ children, value, type }) => {
   );
 };
 const GetinTouch = (props) => {
+  const router = useRouter();
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -151,6 +156,7 @@ const GetinTouch = (props) => {
         (result) => {
           console.log(result.text);
           alert("Success! We'll contact you soon.");
+          // <Link href="/ThankYou" />;
         },
         (error) => {
           console.log(error.text);
@@ -244,31 +250,37 @@ const GetinTouch = (props) => {
             <Label>Your message</Label>
             <Inputt type={"text"} name={"message"} />
             <Center>
-              <Input
-                as={"input"}
-                bg=" #D9D9D9"
-                borderRadius="0"
-                fontFamily="novara"
-                cursor={"pointer"}
-                w={{ md: "18.75vw", base: "100%", "3xl": "360px" }}
-                h={{ md: "3.65vw", base: "13.5vw", "3xl": "70px" }}
-                mt={{ base: "4.25vw", md: "none" }}
-                fontSize={{ md: "1.7vw", base: "6.25vw", "3xl": "2rem" }}
-                letterSpacing="3px"
-                color="#0F0D0E"
-                border={"0px"}
-                fontWeight="500"
-                background="linear-gradient(to right, black 50%, white 50%)"
-                backgroundSize="200% 100%"
-                backgroundPosition="right"
-                _hover={{
-                  backgroundPosition: "left",
-                  color: "white",
-                }}
-                transition="all 0.5s cubic-bezier(0.22, 1, 0.36, 1)"
-                type={"submit"}
-                value={"Submit"}
-              />
+              <Link href={"/ThankYou"}>
+                <Input
+                  as={"input"}
+                  bg=" #D9D9D9"
+                  borderRadius="0"
+                  fontFamily="novara"
+                  cursor={"pointer"}
+                  // px={"auto"}
+                  w={{ md: "18.75vw", base: "85vw", "3xl": "360px" }}
+                  h={{ md: "3.65vw", base: "13.5vw", "3xl": "70px" }}
+                  mt={{ base: "4vw", md: "none" }}
+                  fontSize={{ md: "1.7vw", base: "6.25vw", "3xl": "2rem" }}
+                  letterSpacing="3px"
+                  color="#0F0D0E"
+                  border={"0px"}
+                  fontWeight="500"
+                  background="linear-gradient(to right, black 50%, white 50%)"
+                  backgroundSize="200% 100%"
+                  backgroundPosition="right"
+                  _hover={{
+                    backgroundPosition: "left",
+                    color: "white",
+                  }}
+                  transition="all 0.5s cubic-bezier(0.22, 1, 0.36, 1)"
+                  type={"submit"}
+                  value={"Submit"}
+                  // onClick={() => {
+                  //   router.push("/");
+                  // }}
+                />
+              </Link>
             </Center>
           </FormControl>
 

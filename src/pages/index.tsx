@@ -91,10 +91,10 @@ const DOM = () => {
       <FragrancesZed /> */}
       <Qualities />
       <MobileQualities />
-      {/* <MobileFragrances /> */}
+      <MobileFragrances />
       <Testimonials />
       <MobileTestimonials />
-
+      {/* <ThankYou /> */}
       <GetinTouch activeBg={activeBg} fontColor={fontColor} />
       <Footer />
 
