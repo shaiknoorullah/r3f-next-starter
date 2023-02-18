@@ -102,6 +102,18 @@ export default function Testimonials() {
             gap={{ md: "20px", lg: "30px", xl: "35px" }}
             position={"relative"}
             top={"-225px"}
+            // alignItems={"center"}
+            // fontStyle={"normal"}
+            // color={"white"}
+            // lineHeight={"60px"}
+            // textAlign={"center"}
+            // letterSpacing={"0.1em"}
+            // height={"147px"}
+            // w={"90%"}
+            // textShadow={"1px 1px white"}
+            // gap={{ md: "20px", lg: "30px", xl: "35px" }}
+            // position={"relative"}
+            // top={"-225px"}
           >
             {Testimonialcontent.map((item, index) => {
               return <TestimonialsComponent key={index} {...item} />;
@@ -119,6 +131,7 @@ export default function Testimonials() {
               return <TestimonialsComponent key={index} {...item} />;
             })}
           </Box>
+
           <Box
             className="content"
             display={"flex"}

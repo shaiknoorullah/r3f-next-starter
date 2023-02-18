@@ -13,7 +13,7 @@ export default function ProductDetailpage({ productData }) {
         display={"flex"}
         flexDir={"row"}
         justifyContent={"space-between"}
-        paddingTop={"60px"}
+        // paddingTop={"20px"}
       >
         <Text
           fontFamily={"novara"}
@@ -41,9 +41,10 @@ export default function ProductDetailpage({ productData }) {
         </Text>
       </Box>
       <Image
+        alignSelf={"center"}
         src={productData?.src}
-        margin="auto"
-        w="95%"
+        // margin="auto"
+        w="100%"
         maxH="450px"
         objectFit="cover"
         paddingTop={"10px"}
@@ -152,6 +153,14 @@ export default function ProductDetailpage({ productData }) {
         >
           CONTACT STORE
         </Button>
+        <Image
+          src={"arrowicon.png"}
+          width={"23px"}
+          height={"11px"}
+          // position={"absolute"}
+          // left={"280px"}
+          marginTop={"12px"}
+        />
       </Flex>
     </Box>
   );

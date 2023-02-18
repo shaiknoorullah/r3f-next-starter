@@ -1,19 +1,11 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
-import { useInView } from "@react-spring/three";
-import { motion, useAnimation } from "framer-motion";
-import React, { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import React from "react";
 
 const Perfume3 = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
   const parentVariant = {
     start: {
-      y: "100",
+      y: "50px",
       opacity: 0,
     },
     visible: {
@@ -21,16 +13,17 @@ const Perfume3 = () => {
       opacity: 1,
       transition: {
         duration: 1,
+        delay: "-0.2",
       },
     },
   };
   return (
     <Box
-      ref={ref}
       as={motion.div}
+      viewport={{ once: true }}
       variants={parentVariant}
       initial="start"
-      animate={controls}
+      whileInView="visible"
       display="flex"
       flexDir={{ md: "row", base: "column" }}
       gap={{ md: "3.25vw", "3xl": "3.25rem", base: "3vw" }}
@@ -73,10 +66,6 @@ const Perfume3 = () => {
             "3xl": "565px",
           }}
           // maxWidth={{ base: "80%", md: "32vw",  }}
-          // fontSize={{ base: "34px", lg: "3vw", xl: "4rem" }}
-          // fontWeight="500"
-          // maxW={{ lg: "600px", base: "150px" }}
-          // letterSpacing={"2px"}
         >
           Eau de parfum spray
         </Heading>
@@ -88,10 +77,6 @@ const Perfume3 = () => {
           fontSize={{ base: "3vw", md: "0.8vw ", "3xl": "1rem" }}
           lineHeight={{ base: "3.5vw", md: "1.46vw", "3xl": "1.7rem" }}
           letterSpacing={{ md: "2.5px", base: "6%" }}
-          // fontSize={{ lg: "0.8vw", base: "14px" }}
-          // lineHeight={{ lg: "27px", base: "17px" }}
-          // // letterSpacing={{ lg: "2.5px", base: "6%" }}
-          // h={{ base: "150px", lg: "inherit" }}
         >
           "Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod
           temp incididunt ut labore et dolore magna aliqua. Ut enim ad minim

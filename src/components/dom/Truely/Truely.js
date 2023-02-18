@@ -1,3 +1,5 @@
+/** @format */
+
 import {
   Box,
   Flex,
@@ -32,21 +34,21 @@ const Truely = (props) => {
 
   // const [greaterthan2xl] = () => useMediaQuery("(min-width: 1536px)");
 
-  const mobileheadingVariant = {
-    start: {
-      lineHeight: "5rem",
-      opacity: 0,
-    },
-    visible: {
-      lineHeight: "2rem",
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        type: "tween",
-        ease: [0.45, 0, 0.55, 1],
-      },
-    },
-  };
+  // const mobileheadingVariant = {
+  //   start: {
+  //     lineHeight: "5rem",
+  //     opacity: 0,
+  //   },
+  //   visible: {
+  //     lineHeight: "2rem",
+  //     opacity: 1,
+  //     transition: {
+  //       duration: 0.6,
+  //       type: "tween",
+  //       ease: [0.45, 0, 0.55, 1],
+  //     },
+  //   },
+  // };
 
   const titleVarients = {
     start: {
@@ -71,11 +73,8 @@ const Truely = (props) => {
       color={props.fontColor}
       sx={{
         w: "100%",
-
         fontFamily: "novara",
-
         display: { md: "flex", base: "none" },
-        // display: { lg: "flex", base: "none" },
         flexDir: "column",
         alignItems: "center",
         justifyContent: "center",
@@ -123,8 +122,6 @@ const Truely = (props) => {
             maxW={{ md: "35ch" }}
             fontWeight="400"
             pb={"3.5rem"}
-            // letterSpacing={"0.04em"}
-            // lineHeight={"87px"}
           >
             a truly timeless eau de parfum became one of the most beloved
             perfumes.

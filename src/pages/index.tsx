@@ -24,13 +24,21 @@ import FragrancesZed from "../components/dom/FragrancesZed";
 import GetinTouch from "../components/dom/GetinTouch";
 import ThankYou from "../components/dom/ThankYou";
 import Footer from "../components/dom/Footer";
-import { useRouter } from "next/router";
 import { ChakraProvider, Flex } from "@chakra-ui/react";
 import { useState } from "react";
 // import ProductDetailpage from "@/components/dom/ProductDetailspage";
+import { motion } from "framer-motion";
+// import ProductDetailpage from "@/components/dom/ProductDetailspage";
 import ProductDetailComponent from "@/components/dom/ProductDetailComponent";
+// import ProductDetailComponent from "@/components/dom/ProductDetailComponent";
 // import ProductDetail from "./product/[id]";
 
+import { useRouter } from "next/router";
+// import ProductDetailpage from "@/components/dom/MobileProductDetailspage";
+// import Qualities from "@/components/dom/Qualities";
+// import MobileQualities from "@/components/dom/modilequalities";
+// import Testimonials from "@/components/dom/Testimonials";
+// import Mobiletestimonial from "@/components/dom/Mobiletestimonials";
 // import Shader from '@/components/canvas/ShaderExample/ShaderExample'
 
 // Prefer dynamic import for production builds
@@ -71,8 +79,9 @@ const DOM = () => {
 
   return (
     <>
-      <Loader />
-      <Navbar />
+      {/* <motion.div exit={{ opacity: 0 }}> */}
+      {/* <Loader />
+      <Navbar /> */}
       <FirstPage
         activeBg={activeBg}
         fontColor={fontColor}
@@ -84,21 +93,24 @@ const DOM = () => {
       />
       <Scene1 />
       <Scene2 />
-      <Brands />
+
       <Truely activeBg={activeBg} fontColor={fontColor} />
       <MobileTruely activeBg={activeBg} fontColor={fontColor} />
-      {/* <Fragrances />
-      <FragrancesZed /> */}
+      <Brands />
       <Qualities />
       <MobileQualities />
       <MobileFragrances />
       <Testimonials />
+      <MobileFragrances />
       <MobileTestimonials />
       {/* <ThankYou /> */}
+      {/* <Fragrances /> */}
+      {/* <FragrancesZed /> */}
       <GetinTouch activeBg={activeBg} fontColor={fontColor} />
+      {/* <ProductDetailComponent /> */}
+      {/* <ProductDetailpage /> */}
       <Footer />
-
-      {/* <Truely /> */}
+      {/* </motion.div> */}
     </>
   );
 };
