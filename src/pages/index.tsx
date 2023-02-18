@@ -82,7 +82,7 @@ const DOM = () => {
       {/* <motion.div exit={{ opacity: 0 }}> */}
       {/* <Loader />
       <Navbar /> */}
-      <FirstPage
+      {/* <FirstPage
         activeBg={activeBg}
         fontColor={fontColor}
         imgInvert={imgInvert}
@@ -92,24 +92,24 @@ const DOM = () => {
         setWhiteActive={setWhiteActive}
       />
       <Scene1 />
-      <Scene2 />
+      <Scene2 /> */}
 
       <Truely activeBg={activeBg} fontColor={fontColor} />
       <MobileTruely activeBg={activeBg} fontColor={fontColor} />
       <Brands />
+      <MobileFragrances />
       <Qualities />
       <MobileQualities />
-      <MobileFragrances />
       <Testimonials />
-      <MobileFragrances />
       <MobileTestimonials />
+      <GetinTouch activeBg={activeBg} fontColor={fontColor} />
+      <Footer />
+      {/* <MobileFragrances /> */}
       {/* <ThankYou /> */}
       {/* <Fragrances /> */}
       {/* <FragrancesZed /> */}
-      <GetinTouch activeBg={activeBg} fontColor={fontColor} />
       {/* <ProductDetailComponent /> */}
       {/* <ProductDetailpage /> */}
-      <Footer />
       {/* </motion.div> */}
     </>
   );

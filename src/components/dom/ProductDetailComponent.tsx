@@ -58,7 +58,7 @@ const ProductDetailComponent = ({ productData }) => {
       w="100vw"
       maxW={"1920px"}
       mx={"auto"}
-      h="100vh"
+      // h="120vh"
       position="relative"
       display={{ md: "flex", base: "none" }}
       gap={"2rem"}
@@ -75,7 +75,7 @@ const ProductDetailComponent = ({ productData }) => {
           },
         }}
         w="45%"
-        h="100%"
+        h="100vh"
         px="2rem"
         py="2rem"
         display={{ md: "flex", base: "none" }}

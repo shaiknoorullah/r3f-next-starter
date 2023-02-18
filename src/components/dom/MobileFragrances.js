@@ -1,5 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Box, Button, Heading, Image, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Heading,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
 import Slider from "react-slick";
 import MagicSliderDots from "react-magic-slider-dots";
 import ReactDOM from "react-dom";
@@ -19,7 +27,7 @@ const MobileFragrances = (props) => {
   const settings = {
     dots: true,
     color: "white",
-    arrows: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -51,7 +59,7 @@ const MobileFragrances = (props) => {
     {
       id: 2,
       productName: "Thierry Mugler Angel.",
-      src: "/images/three.jpg",
+      src: "/images/image5.png",
       productDiscription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus risus, porta vitae est vitae, finibus vulputate turpis. Nam lectus urna, dictum id nisi quis, convallis feugiat urna. Nam bibendum felis dui, vitae imperdiet magna .",
       price: "$50000",
@@ -60,7 +68,7 @@ const MobileFragrances = (props) => {
     {
       id: 3,
       productName: "Engage L'amante Aqua",
-      src: "/images/four.jpg",
+      src: "/images/one.jpg",
       productDiscription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus risus, porta vitae est vitae, finibus vulputate turpis. Nam lectus urna, dictum id nisi quis, convallis feugiat urna. Nam bibendum felis dui, vitae imperdiet magna .",
       price: "$10000",
@@ -69,7 +77,7 @@ const MobileFragrances = (props) => {
     {
       id: 4,
       productName: "Zed",
-      src: "/images/four.jpg",
+      src: "/images/image5.png",
       productDiscription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus risus, porta vitae est vitae, finibus vulputate turpis. Nam lectus urna, dictum id nisi quis, convallis feugiat urna. Nam bibendum felis dui, vitae imperdiet magna .",
       price: "$3000000",
@@ -82,74 +90,56 @@ const MobileFragrances = (props) => {
 
   return (
     <Box
-      w="100vw"
-      h="100vh"
+      display={{ base: "block", md: "none" }}
       bg=" #122333"
-      // display={{ base: "felx", lg: "none" }}
-      // h="100vh"
-      flexDir="colunm"
-      alignItems="center"
-      justifyContent="center"
+      py={"12.5vw"}
+      px={"5vw"}
+      pb={"27vw"}
+      w={"100%"}
     >
-      <Box
-        display="flex"
-        flexDir="colunm"
-        alignItems="center"
-        justifyContent="center"
+      <Heading
+        color="white"
+        fontFamily="novara"
+        fontWeight="400"
+        textAlign="center"
+        fontSize={"6.3vw"}
+        letterSpacing={"1px"}
       >
-        <Heading
-          color="white"
-          fontFamily="novara"
-          paddingTop="50px"
-          fontWeight="400"
-          textAlign="center"
-        >
-          the fragrance difference{" "}
-        </Heading>
-        <Box margin="auto" textAlign="center">
-          <Image display="inline-block" w="100px" src="/images/perfume1.png" />
-        </Box>
-      </Box>
+        the fragrance difference{" "}
+      </Heading>
+
+      <Image mt={"1vw"} w="15.5vw" mx={"auto"} src="/images/perfume1.png" />
 
       <Slider {...settings}>
         {perfumes.map((item, index) => {
           // console.log(item.id);
           return (
             <Link
-              // as={motion.link}
-              // as={`/product/${item.id}`}
               exit={{ opacity: 0 }}
               key={item.id}
               href={`/product/${item.id}`}
               passHref
             >
-              {/* <Link
-              href={`/product/[id]`}
-              as={`/product/${item.id}`}
-              passHref
-            > */}
-              <Box
+              <Center
                 as={motion.div}
                 key={index}
                 ref={ref}
-                marginTop="100px"
+                marginTop="19vw"
                 display="flex"
                 flexDir="column"
                 alignItems="center"
-                w="300px"
+                justifyContent={"center"}
+                mx={"auto"}
+                w="85vw"
                 color="white"
-                // border="1px solid white"
-                position="relative"
               >
                 <Heading
                   as={motion.p}
                   position="absolute"
-                  top="40%"
-                  left="50px"
                   mixBlendMode=" exclusion"
                   fontFamily="novara"
-                  fontSize="3rem"
-                  w="300px"
+                  fontSize="13vw"
+                  w="85vw"
                   textAlign="center"
                   textShadow="2px 5px solid black"
                   fontWeight="400"
@@ -158,18 +148,14 @@ const MobileFragrances = (props) => {
                 </Heading>
                 <Image
                   margin="auto"
-                  // href={`/product/${item.id}`}
                   display="inline"
-                  borderRadius="300px"
-                  w="300px"
-                  h="450px"
-                  // sx={{
-                  //   filter: "saturate(60%)",
-                  //   backdgroundFilter: "brightness(0.5)",
-                  // }}
+                  borderRadius="full"
+                  w="78.5vw"
+                  justifySelf={"center"}
+                  alignSelf={"center"}
                   src={item.src}
                 />
-              </Box>
+              </Center>
             </Link>
           );
         })}
