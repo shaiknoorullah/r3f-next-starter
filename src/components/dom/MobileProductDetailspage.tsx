@@ -13,20 +13,19 @@ export default function ProductDetailpage({ productData }) {
         display={"flex"}
         flexDir={"row"}
         justifyContent={"space-between"}
-        paddingTop={"20px"}
+        paddingTop={"60px"}
       >
         <Text
-          w="full"
           fontFamily={"novara"}
           fontStyle={"normal"}
           fontWeight={"400"}
           fontSize={{ base: "24px", sm: "30px" }}
           lineHeight={"27px"}
           letterSpacing={"0.07em"}
-          width={{ base: "200px", sm: "250px" }}
+          width={{ base: "200px", sm: "230px" }}
           justifyItems={"start"}
         >
-          {productData?.productName}
+          Engage L'amante Aqua
         </Text>
         <Text
           // border="1px solid black"
@@ -37,10 +36,8 @@ export default function ProductDetailpage({ productData }) {
           fontSize={{ base: "18px", sm: "20px" }}
           lineHeight={"0.04em"}
           justifyItems={"flex-end"}
-          // position={"absolute"}
-          // left={"356px"}
         >
-          {productData?.price}
+          $300
         </Text>
       </Box>
       <Image
@@ -60,10 +57,12 @@ export default function ProductDetailpage({ productData }) {
         letterSpacing={"7%"}
         paddingTop={"10px"}
       >
-        {productData?.productDiscription}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus
+        risus, porta vitae est vitae, finibus vulputate turpis. Nam lectus urna,
+        dictum id nisi quis, convallis feugiat urna.
       </Text>
       <Box display="flex" paddingTop={"35px"} gap="2rem" alignItems="center">
-        <label style={{ fontSize: "18px" }} className="container">
+        <label className="container">
           50 ml/1.7 oz
           <input
             style={{ border: "5px solid black" }}
@@ -73,7 +72,7 @@ export default function ProductDetailpage({ productData }) {
           />
           <span className="checkmark"></span>
         </label>
-        <label style={{ fontSize: "18px" }} className="container">
+        <label className="container">
           100 ml/3.4 oz
           <input type="radio" name="radio" />
           <span className="checkmark"></span>
@@ -150,17 +149,8 @@ export default function ProductDetailpage({ productData }) {
           lineHeight={"12px"}
           letterSpacing={"0.185em"}
           textDecorationLine={"underline"}
-          margin="auto"
-          paddingRight="2rem"
         >
           CONTACT STORE
-          <Image
-            marginLeft="2rem"
-            src={"/images/ArrowIcon.png"}
-            width={"23px"}
-            height={"11px"}
-            margin="auto"
-          />
         </Button>
       </Flex>
     </Box>

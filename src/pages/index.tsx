@@ -22,11 +22,13 @@ import MobileFragrances from "../components/dom/MobileFragrances";
 import Fragrances from "../components/dom/Fragrances";
 import FragrancesZed from "../components/dom/FragrancesZed";
 import GetinTouch from "../components/dom/GetinTouch";
+import ThankYou from "../components/dom/ThankYou";
 import Footer from "../components/dom/Footer";
 import { useRouter } from "next/router";
 import { ChakraProvider, Flex } from "@chakra-ui/react";
 import { useState } from "react";
-// import ProductDetailComponent from "@/components/dom/ProductDetailComponent";
+// import ProductDetailpage from "@/components/dom/ProductDetailspage";
+import ProductDetailComponent from "@/components/dom/ProductDetailComponent";
 // import ProductDetail from "./product/[id]";
 
 // import Shader from '@/components/canvas/ShaderExample/ShaderExample'
