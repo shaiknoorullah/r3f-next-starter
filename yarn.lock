@@ -1739,11 +1739,6 @@
   dependencies:
     commander "^2.15.1"
 
-"@emailjs/browser@^3.10.0":
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/@emailjs/browser/-/browser-3.10.0.tgz#74de36d95838e117cf76f7b71b68ffbe5668367d"
-  integrity sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg==
-
 "@emotion/babel-plugin@^11.10.5":
   version "11.10.5"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.10.5.tgz#65fa6e1790ddc9e23cc22658a4c5dea423c55c3c"
@@ -3302,15 +3297,6 @@ camera-controls@^2.1.0:
   resolved "https://registry.yarnpkg.com/camera-controls/-/camera-controls-2.2.1.tgz#126b63f46ca15231ce4c06d80370d741bfb95365"
   integrity sha512-L5E9m8ueYcOau/rN5vAM/bP7IwWcSmfG2Vv58iw/fnq7UCKAL6EvriEiQOOTZ10U7Q6dmmXIlHFnoJfHXHTTlA==
 
-caniuse-lite@^1.0.30001406:
-  version "1.0.30001445"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001445.tgz#cf2d4eb93f2bcdf0310de9dd6d18be271bc0b447"
-  integrity sha512-8sdQIdMztYmzfTMO6KfLny878Ln9c2M0fc7EH60IjlP4Dc4PiCy7K2Vl3ITmWgOyPgVQKa5x+UP/KqFsxj4mBg==
-
-caniuse-lite@^1.0.30001449:
-  version "1.0.30001456"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001456.tgz#734ec1dbfa4f3abe6e435b78ecf40d68e8c32ce4"
-  integrity sha512-XFHJY5dUgmpMV25UqaD4kVq2LsiaU5rS8fb0f17pCoXQiQslzmFgnfOxfvo1bTpTqf7dwG/N/05CnLCnOEKmzA==
 caniuse-lite@^1.0.30001406, caniuse-lite@^1.0.30001449:
   version "1.0.30001453"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001453.tgz#6d3a1501622bf424a3cee5ad9550e640b0de3de8"
