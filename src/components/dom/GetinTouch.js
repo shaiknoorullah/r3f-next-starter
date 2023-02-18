@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Center,
   Flex,
   FormControl,
   FormLabel,
@@ -11,7 +12,8 @@ import {
   Wrap,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import React from "react";
+import { React, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const formControlVariant = {
   hidden: {
@@ -51,7 +53,8 @@ const childVariant = {
     },
   },
 };
-const Inputt = ({ fontColor }) => {
+
+const Inputt = ({ fontColor, type, name }) => {
   return (
     <Input
       // as={motion.input}
@@ -60,15 +63,18 @@ const Inputt = ({ fontColor }) => {
       // whileInView={{
       //   borderBottom: "2px solid white",
       // }}
-      variant="unstyled"
       // borderBottom ={` 1px solid ${fontColor}`}
+      as={"input"}
+      type={type}
+      name={name}
+      variant="unstyled"
       borderBottom="2px solid "
       borderBottomColor={fontColor}
       borderRadius="2px"
-      w={{ md: "430px", base: "90vw", md: "430px" }}
-      marginTop={{ md: "5px", base: "00" }}
-      fontSize="1.2rem"
-      marginBottom={{ md: "49px", base: "0.5rem" }}
+      w={{ md: "22.39vw", base: "100%", "3xl": "430px" }}
+      h={{ md: "3.4vw", "3xl": "4.1rem", base: "7vw" }}
+      fontSize={{ md: "1.25vw", "3xl": "1.25rem", "3xl": "6.5vw" }}
+      marginBottom={{ md: "4.2vw", base: "12.5vw", "3xl": "5rem" }}
     />
   );
 };
@@ -81,22 +87,20 @@ const Label = ({ children }) => {
       variants={childVariant}
       initial="hidden"
       whileInView="visible"
-      // color="#585757"
-      // color={"whiteAlpha.500"}
-      filter={"invert(100%)"}
-      fontSize={{ md: "1.5rem", base: "18px" }}
+      color="#585757"
+      fontSize={{ md: "1.4vw", base: "3.75vw", "3xl": "1.65rem" }}
+      w={"fit-content"}
       margin="0"
       fontFamily="gilroy"
       lineHeight={"1.5rem"}
       fontWeight="400"
-      marginTop={{ md: "1.5vw", "3xl": "2rem", base: "10px" }}
     >
       {children}
     </FormLabel>
   );
 };
 
-const Btn = ({ children }) => {
+const Btn = ({ children, value, type }) => {
   return (
     <Button
       as={motion.div}
@@ -104,19 +108,17 @@ const Btn = ({ children }) => {
       variants={childVariant}
       initial="hidden"
       whileInView="visible"
-      display="flex"
       bg=" #D9D9D9"
       borderRadius="0"
       fontFamily="novara"
-      w={{ md: "430px", base: "90vw", md: "430px" }}
-      h={{ md: "70px", base: "40px" }}
-      marginTop="30px"
-      // marginLeft={{ base: "0", md: "36px" }}
-      fontSize={{ md: "2rem", base: "20px" }}
+      cursor={"pointer"}
+      w={{ md: "18.75vw", base: "100%", "3xl": "360px" }}
+      h={{ md: "3.65vw", base: "13.5vw", "3xl": "70px" }}
+      mt={{ base: "4.25vw", md: "none" }}
+      fontSize={{ md: "1.7vw", base: "6.25vw", "3xl": "2rem" }}
       letterSpacing="3px"
       color="#0F0D0E"
       fontWeight="500"
-      // _hover={{ backgroundColor: "black", color: "white" }}
       background="linear-gradient(to right, black 50%, white 50%)"
       backgroundSize="200% 100%"
       backgroundPosition="right"
@@ -125,25 +127,46 @@ const Btn = ({ children }) => {
         color: "white",
       }}
       transition="all 0.5s cubic-bezier(0.22, 1, 0.36, 1)"
+      type={type}
+      value={value}
     >
       {children}
     </Button>
   );
 };
 const GetinTouch = (props) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "getintouch_service",
+        "getintouch_form",
+        form.current,
+        "CnLKDNVSjToyYRW3n"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Success! We'll contact you soon.");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Error! Try again.");
+        }
+      );
+  };
+
   return (
-    <Box
-      id="contact"
-      bg={props.activeBg}
-      // bgColor={"black"}
-      h={{ md: "auto", base: "auto" }}
-      w="100vw"
-    >
+    <Box id="contact" bg={props.activeBg} w="100vw">
       <Box
-        // maxW="2000px"
-        maxW={"1500px"}
+        maxW={"1920px"}
         color={props.fontColor}
         p={{ md: "7vw", "3xl": "100px" }}
+        py={{ base: "2.5rem" }}
+        pb={{ base: "5rem" }}
         display="flex"
         flexDir="column"
         fontWeight="300"
@@ -151,69 +174,102 @@ const GetinTouch = (props) => {
         alignItems="center"
         margin="auto"
       >
-        <Box display={{ base: "flex" }} flexDir={"row"}>
+        <Box display={{ base: "flex" }} flexDir={"row"} gap={"4.75vw"}>
           <Image
-            src={"rectangle 87.png"}
+            alignSelf={"center"}
+            src={"getleft.png"}
             justifyContent={"flex-start"}
-            position={"absolute"}
-            left={"0px"}
-            width={{ base: "50px", sm: "70px" }}
-            bottom={"690px"}
+            h={{ base: "15vw" }}
             display={{ md: "none" }}
-          ></Image>
+          />
           <Heading
             fontFamily="novara"
             fontWeight="300"
             letterSpacing="1.6px"
-            fontSize={{ md: "60px", base: "30px", md: "40px" }}
+            fontSize={{ md: "3.15vw", base: "6.25vw", "3xl": "4rem" }}
             textAlign="center"
-            maxW={{ base: "200px", sm: "fit-content" }}
+            maxW={{ base: "19ch", md: "full" }}
+            // maxW={{ base: "200px", sm: "fit-content" }}
           >
             Get in touch! we’d love to hear from you
           </Heading>
           <Image
-            src={"rectangle.png"}
-            position={"absolute"}
-            right={"0"}
-            bottom={"690px"}
-            width={{ base: "50px", sm: "70px" }}
+            alignSelf={"center"}
+            src={"getright.png"}
+            justifyContent={"flex-start"}
+            h={{ base: "15vw" }}
             display={{ md: "none" }}
-          ></Image>
+          />
         </Box>
         <Text
           fontFamily="gilroy"
-          fontSize={{ md: "32px", base: "18px" }}
+          fontSize={{ md: "1.7vw", base: "4.75vw", "3xl": "35px" }}
+          w={{ base: "85%", md: "full" }}
           fontWeight="400"
-          marginTop={{ md: "25px", base: "28px" }}
-          letterSpacing={{ md: "2px", base: "inherit" }}
+          marginTop={{ md: "1.5vw", base: "10vw", "3xl": "28px" }}
+          letterSpacing={{ md: "2px", base: "1px" }}
           textAlign={{ base: "center" }}
         >
           Fill out the quick form and we will be in touch with lightening speed.{" "}
         </Text>
         <Box
+          mt={{ md: "4.6vw", "3xl": "5.5rem", base: "14vw" }}
           display="flex"
-          minW={{ md: "82vw", base: "inherit" }}
-          justifyContent="space-around"
-          gap={"2rem"}
+          w={"full"}
+          maxW={{ base: "85%", md: "1575px" }}
+          justifyContent="space-between"
         >
           <FormControl
-            as={motion.div}
-            viewport={{ once: true }}
-            variants={formControlVariant}
-            initial="hidden"
-            whileInView="visible"
+            // as={(motion.div ) "form"}
+            // viewport={{ once: true }}
+            // variants={formControlVariant}
+            // initial="hidden"
+            // whileInView="visible"
+            as={"form"}
+            w={{ base: "full", md: "fit-content" }}
+            maxW={{ base: "full", md: "430px" }}
+            ref={form}
+            onSubmit={sendEmail}
           >
             <Label>Name</Label>
-            <Inputt fontColor={props.fontColor} />
-
+            <Inputt
+              type={"text"}
+              name={"user_name"}
+              fontColor={props.fontColor}
+            />
             <Label>Contact number</Label>
-            <Inputt />
+            <Inputt type={"number"} name={"user_phone"} />
             <Label>Email address</Label>
-            <Inputt />
+            <Inputt type={"email"} name={"user_email"} />
             <Label>Your message</Label>
-            <Inputt />
-
-            <Btn>Submit </Btn>
+            <Inputt type={"text"} name={"message"} />
+            <Center>
+              <Input
+                as={"input"}
+                bg=" #D9D9D9"
+                borderRadius="0"
+                fontFamily="novara"
+                cursor={"pointer"}
+                w={{ md: "18.75vw", base: "100%", "3xl": "360px" }}
+                h={{ md: "3.65vw", base: "13.5vw", "3xl": "70px" }}
+                mt={{ base: "4.25vw", md: "none" }}
+                fontSize={{ md: "1.7vw", base: "6.25vw", "3xl": "2rem" }}
+                letterSpacing="3px"
+                color="#0F0D0E"
+                border={"0px"}
+                fontWeight="500"
+                background="linear-gradient(to right, black 50%, white 50%)"
+                backgroundSize="200% 100%"
+                backgroundPosition="right"
+                _hover={{
+                  backgroundPosition: "left",
+                  color: "white",
+                }}
+                transition="all 0.5s cubic-bezier(0.22, 1, 0.36, 1)"
+                type={"submit"}
+                value={"Submit"}
+              />
+            </Center>
           </FormControl>
 
           <Image
@@ -226,10 +282,9 @@ const GetinTouch = (props) => {
               transition: { duration: "0.8" },
             }}
             viewport={{ once: true }}
-            display={{ xl: "inline-block", base: "none" }}
-            marginTop="160px"
-            maxW={"700px"}
-            h="400px"
+            display={{ md: "inline-block", base: "none" }}
+            maxW={{ md: "38.5vw", "3xl": "745px" }}
+            maxH="400px"
             src="/images/perfume6.png"
           />
         </Box>

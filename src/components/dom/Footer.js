@@ -53,7 +53,7 @@ const Footer = () => {
             <Text
               style={{
                 marginTop: "2.5px",
-                width: "3rem",
+                width: "6.8vw",
                 height: "1px",
                 border: "1px solid white",
               }}
@@ -83,7 +83,7 @@ const Footer = () => {
             <Text
               style={{
                 marginTop: "2.5px",
-                width: "3rem",
+                width: "4.8vw",
                 height: "1px",
                 border: "1px solid white",
               }}
@@ -112,7 +112,7 @@ const Footer = () => {
             <Text
               style={{
                 marginTop: "2.5px",
-                width: "3rem",
+                width: "3.85vw",
                 height: "1px",
                 border: "1px solid white",
               }}
@@ -141,7 +141,7 @@ const Footer = () => {
             <Text
               style={{
                 marginTop: "2.5px",
-                width: "3rem",
+                width: "8.2vw",
                 height: "1px",
                 border: "1px solid white",
               }}
