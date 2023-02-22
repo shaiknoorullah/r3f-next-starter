@@ -6,7 +6,6 @@ const Footer = () => {
     <Box
       w="full"
       bg="#0B1C2C"
-      // h={{ md: "75vh", base: "100vh" }}
       display="flex"
       flexDir="column"
       justifyContent="space-between"
@@ -14,7 +13,6 @@ const Footer = () => {
       <Box
         maxW="1920px"
         w="full"
-        // padding={{ md: "5rem 0 0 5rem", base: "2rem 0 0 2rem" }}
         color="white"
         margin="auto"
         py={{ base: "3rem", lg: "5.5rem" }}
@@ -30,10 +28,7 @@ const Footer = () => {
         <Flex
           margin="auto"
           flexWrap="wrap"
-          // border="1px solid white"
-
           maxW={{ base: "90vw", lg: "85vw", xl: "80vw", "2xl": "75vw" }}
-          // padding={{ md: "20px 0 0 75px", base: "0" }}
           flexDir={{ md: "row", base: "column" }}
           justifyContent={{ md: "space-between" }}
           gap={{ md: "0", lg: "1rem", base: "4rem" }}
