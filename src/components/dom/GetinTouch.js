@@ -104,40 +104,6 @@ const Label = ({ children }) => {
   );
 };
 
-const Btn = ({ children, value, type }) => {
-  return (
-    <Button
-      as={motion.div}
-      viewport={{ once: true }}
-      variants={childVariant}
-      initial="hidden"
-      whileInView="visible"
-      bg=" #D9D9D9"
-      borderRadius="0"
-      fontFamily="novara"
-      cursor={"pointer"}
-      w={{ md: "18.75vw", base: "100%", "3xl": "360px" }}
-      h={{ md: "3.65vw", base: "13.5vw", "3xl": "70px" }}
-      mt={{ base: "4.25vw", md: "none" }}
-      fontSize={{ md: "1.7vw", base: "6.25vw", "3xl": "2rem" }}
-      letterSpacing="3px"
-      color="#0F0D0E"
-      fontWeight="500"
-      background="linear-gradient(to right, black 50%, white 50%)"
-      backgroundSize="200% 100%"
-      backgroundPosition="right"
-      _hover={{
-        backgroundPosition: "left",
-        color: "white",
-      }}
-      transition="all 0.5s cubic-bezier(0.22, 1, 0.36, 1)"
-      type={type}
-      value={value}
-    >
-      {children}
-    </Button>
-  );
-};
 const GetinTouch = (props) => {
   const router = useRouter();
   const form = useRef();

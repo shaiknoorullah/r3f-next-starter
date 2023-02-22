@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Center,
-  Flex,
-  Heading,
-  Text,
-  Link,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import TestimonialsComponent from "./TestimonialComponent";
 import Testimonialcontent from "./Testimonialcontent";
 import Marquee from "react-fast-marquee";

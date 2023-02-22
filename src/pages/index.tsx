@@ -97,6 +97,7 @@ const DOM = () => {
       <Truely activeBg={activeBg} fontColor={fontColor} />
       <MobileTruely activeBg={activeBg} fontColor={fontColor} />
       <Brands />
+      <Fragrances />
       <MobileFragrances />
       <Qualities />
       <MobileQualities />
@@ -106,7 +107,6 @@ const DOM = () => {
       <Footer />
       {/* <MobileFragrances /> */}
       {/* <ThankYou /> */}
-      {/* <Fragrances /> */}
       {/* <FragrancesZed /> */}
       {/* <ProductDetailComponent /> */}
       {/* <ProductDetailpage /> */}
